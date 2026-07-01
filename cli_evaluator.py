@@ -36,6 +36,8 @@ def main():
                 
                 if data.get('end_of_conversation'):
                     print("\n[Agent flagged: END_OF_CONVERSATION]")
+                    print("-" * 50)
+                    break
                 
                 print("-" * 50)
                 
