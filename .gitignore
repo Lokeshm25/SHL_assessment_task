@@ -11,6 +11,8 @@ env/
 .env
 
 # Project specific data & models
+shl_catalog.index
+catalog_metadata.pkl
 GenAI_SampleConversations/
 
 # User specific plans

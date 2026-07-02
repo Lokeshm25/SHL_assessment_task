@@ -11,6 +11,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the rest of the application code
 COPY . .
 
+# Generate the FAISS index and metadata dynamically during the Docker build
+RUN python data_pipeline.py
+
 # Expose port 7860 (Hugging Face Spaces default)
 EXPOSE 7860
 
