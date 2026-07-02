@@ -1,6 +1,6 @@
 import os
 from fastapi import FastAPI, HTTPException
-from fastapi.responses import JSONResponse
+from fastapi.responses import JSONResponse, RedirectResponse
 from dotenv import load_dotenv
 
 from schemas import ChatRequest, ChatResponse
@@ -26,6 +26,11 @@ def health_check():
     if agent is not None:
         return {"status": "ok"}
     return JSONResponse(status_code=503, content={"status": "initializing"})
+
+@app.get("/", include_in_schema=False)
+def root():
+    """Redirect root hits to the Swagger UI."""
+    return RedirectResponse(url="/docs")
 
 @app.post("/chat", response_model=ChatResponse)
 def chat_endpoint(payload: ChatRequest):

@@ -13,7 +13,6 @@ env/
 # Project specific data & models
 shl_catalog.index
 catalog_metadata.pkl
-shl_product_catalog.json
 GenAI_SampleConversations/
 
 # User specific plans
