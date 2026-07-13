@@ -9,6 +9,7 @@ app_port: 7860
 # Conversational SHL Assessment Recommender
 
 An AI-powered conversational agent that helps users find the right SHL Individual Test Solutions. Built with FastAPI, Groq (Llama 3), and FAISS for hybrid vector/exact-match retrieval.
+Deployed API Endpoint: <https://lokeshm25-shl-assessment-task.hf.space/>
 
 ## Architecture
 
